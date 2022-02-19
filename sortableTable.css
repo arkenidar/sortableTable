@@ -16,7 +16,7 @@ th {
 	cursor: pointer;
 }
 
-th:before {
+th:not(:first-of-type):before {
 	content: '▾';
 	color: #555;
 	margin-right: 0.5em;
