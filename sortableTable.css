@@ -1,0 +1,35 @@
+html {
+	font-family: sans-serif;
+}
+
+table {
+	border-spacing: 0;
+}
+
+th {
+	text-align: left;
+	background-color: #222;
+	color: #eee;
+}
+
+th {
+	cursor: pointer;
+}
+
+th:before {
+	content: '▾';
+	color: #555;
+	margin-right: 0.5em;
+}
+
+th.sorted:before {
+	color: #eee;
+}
+
+td {
+	border-bottom: 1px solid #ddd;
+}
+
+tr > * {
+	padding: 0.5em;
+}
