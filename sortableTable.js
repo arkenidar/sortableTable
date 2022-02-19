@@ -6,7 +6,7 @@ let table = [
 { name: 'Wolverine',    realname: 'Howlett, James',   power: 'Regeneration',     info: 'http://www.superherodb.com/Wolverine/10-161/' }
 ]
 
-// initally is sorted by "name"
+// initially is sorted by "name"
 let sortColumn = "name"
 // changing "sortColumn" must activate the column action
 columnAction(sortColumn)
