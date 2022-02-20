@@ -8,8 +8,8 @@ let table = [
 
 // initially is sorted by "name" column
 let sortColumn = "name"
-// initially is sorted in "ascending" order (not descending)
-let sortOrder = "ascending"
+// initially is sorted in "unspecified" order (it then defaults to something)
+let sortOrder = "unspecified"
 // changing "sortColumn" must activate the column action
 columnAction(sortColumn)
 
@@ -29,7 +29,10 @@ for(let column of document.querySelectorAll("[data-sortable]")){
 // action when a table column is activated
 function columnAction(columnName){
     
+    // if action on a sorted column then invert sorting order
     if(columnName==sortColumn){
+        // invert sorting order
+        // sort order defaults to "ascending" if "unspecified"
         sortOrder = sortOrder=="ascending" ? "descending":"ascending"
     }
 
