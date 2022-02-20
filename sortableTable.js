@@ -6,8 +6,10 @@ let table = [
 { name: 'Wolverine',    realname: 'Howlett, James',   power: 'Regeneration',     info: 'http://www.superherodb.com/Wolverine/10-161/' }
 ]
 
-// initially is sorted by "name"
+// initially is sorted by "name" column
 let sortColumn = "name"
+// initially is sorted in "ascending" order (not descending)
+let sortOrder = "ascending"
 // changing "sortColumn" must activate the column action
 columnAction(sortColumn)
 
@@ -27,18 +29,23 @@ for(let column of document.querySelectorAll("[data-sortable]")){
 // action when a table column is activated
 function columnAction(columnName){
     
+    if(columnName==sortColumn){
+        sortOrder = sortOrder=="ascending" ? "descending":"ascending"
+    }
+
     // no CSS class (part of CSS class change)
     setSortedClassName("",sortColumn)
     
     // current column used for sorting
     sortColumn=columnName
-    // sort by column
-    table.sort((a, b) => a[sortColumn] > b[sortColumn] ? 1 : -1)
+    // sort by "sort column" and "sort order"
+    const sign = sortOrder == "ascending" ? 1 : -1
+    table.sort((a, b) => a[sortColumn] > b[sortColumn] ? sign : -sign)
     // changing table means producing HTML again
     fillTable()
     
     // set "sorted" CSS class (CSS class change)
-    setSortedClassName("sorted",sortColumn)
+    setSortedClassName(sortOrder == "ascending" ? "sortedAscending" : "sortedDescending", sortColumn)
     
     // CSS class for "sortable" (column name for selecting it)
     function setSortedClassName(className,columnName){

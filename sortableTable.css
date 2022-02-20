@@ -12,17 +12,18 @@ th {
 	color: #eee;
 }
 
-th {
+th:not(:first-of-type) {
 	cursor: pointer;
 }
 
-th:not(:first-of-type):before {
+th.sortedAscending:before {
 	content: '▾';
-	color: #555;
-	margin-right: 0.5em;
 }
-
-th.sorted:before {
+th.sortedDescending:before {
+	content: '▴';
+}
+th.sortedAscending:before, th.sortedDescending:before {
+	margin-right: 0.5em;
 	color: #eee;
 }
 
