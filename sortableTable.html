@@ -7,6 +7,19 @@
     </head>
     <body>
         <link rel="stylesheet" href="sortableTable.css">
+
+        <table id="products">
+            <thead>
+                <th data-sortable="name">Product</th>
+                <th data-sortable="cost">Cost</th>
+                <th data-sortable="avail">Qty</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <hr>
+
         <table id="heroes">
             <thead>
                 <th>#</th>
@@ -17,6 +30,19 @@
             <tbody>
             </tbody>
         </table>
+        <hr>
+        <table id="heroes2">
+            <thead>
+                <th>#</th>
+                <th data-sortable="name">Superhero name</th>
+                <th data-sortable="realname">Real name</th>
+                <th data-sortable="power">Superpower</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <hr>
+
         <script src="sortableTable.js"></script>
     </body>
 </html>
