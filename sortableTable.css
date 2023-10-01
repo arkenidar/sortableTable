@@ -1,36 +1,36 @@
 html {
-	font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 table {
-	border-spacing: 0;
+  border-spacing: 0;
 }
 
 th {
-	text-align: left;
-	background-color: #222;
-	color: #eee;
+  text-align: left;
+  background-color: #222;
+  color: #eee;
 }
 
 th:not(:first-of-type) {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 th.sortedAscending:before {
-	content: '▾';
+  content: '▾';
 }
 th.sortedDescending:before {
-	content: '▴';
+  content: '▴';
 }
 th.sortedAscending:before, th.sortedDescending:before {
-	margin-right: 0.5em;
-	color: #eee;
+  margin-right: 0.5em;
+  color: #eee;
 }
 
 td {
-	border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 tr > * {
-	padding: 0.5em;
+  padding: 0.5em;
 }
